@@ -1,24 +1,36 @@
-1. What does nslookup do?
+1. What does nslookup do?  
+    查看IP与域名的对应关系，感觉用处不大，[man手册](http://linux.die.net/man/1/nslookup)
 
-2. How do you display the top most process utilizing CPU process?
+2. How do you display the top most process utilizing CPU process?  
+    进入top命令后，输入大写P按cpu占用率降序排列，大写M按内存占用降序排列。
 
-3. How to check all open ports on a Linux machine and block the unused ports?
+3. How to check all open ports on a Linux machine and block the unused ports?  
+    sudo netstat -anp  
+    "sudo iptables -A INPUT -p tcp --dport $PORT -j DROP"    
+    "sudo iptables -A OUTPUT -p tcp --dport $PORT -j DROP"  
+    列出谁在使用某个端口  lsof -i :3306  
 
-4. What is Linux? How is it different from UNIX?
+4. What is Linux? How is it different from UNIX?  
 
-5. Explain the boot process of Unix System in details.
+5. Explain the boot process of Unix System in details.  
 
-6. How do you change the permissions? How to create a file that’s read-only property?
+6. How do you change the permissions? How to create a file that’s read-only property?  
+    chmod xxx file
+    touch file && chmod 444 file
 
 7. Explain SUDO in detail. What are its disadvantages?
 
 8. What is the difference between UDP and TCP?
 
-9. Describe the boot order of a Linux machine.
+9. Describe the boot order of a Linux machine.  
+    这啥意思？看你用grub还是什么启动管理器了吧...
 
-10. Design a 3-tier web application.
+10. Design a 3-tier web application.  
+     Client / Application Server / DataBase Server
+     这里指的应该是physical tier，一开始以为是MVC...
 
-11. Sketch how you would route network traffic from the internet into a few subnets.
+11. Sketch how you would route network traffic from the internet into a few subnets.  
+
 
 12. How do you know about virtualization? Is it good to use?
 
